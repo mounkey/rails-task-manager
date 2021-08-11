@@ -1,0 +1,8 @@
+<div class="container">
+  <h1> Task </h1>
+  <% @tasks.each do |t|%>
+    <div class="card">
+      <p><%= "#{t.tittle} - #{t.details} - #{t.completed} - " %> <%= link_to  "Editar", edit_tasks_path(t) %> <%= link_to  "Eliminar", task_path(t), method: :delete %> </p>
+    </div>
+  <% end %>
+</div>
